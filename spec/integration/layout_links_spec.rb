@@ -26,5 +26,19 @@ describe "Layout links" do
     response.should render_template('users/new')
   end
   
+  it "should have the right links on the layout" do
+    visit root_path
+    click_link "About"
+    response.should render_template('pages/about')
+    click_link "Help"
+    response.should # fill in
+    click_link "Contact"
+    response.should # fill in
+    click_link "Home"
+    response.should # fill in
+    click_link "Sign up now!"
+    response.should # fill in
+  end
+  
 end
 
